@@ -1,4 +1,4 @@
-# 🛠️ Component Defect Detector
+# 🛠️ Component/PCBA Defect Detector
 
 An AI-powered visual inspection system to detect defects in electronic components using YOLOv8. Supports real-time detection, REST API integration, database logging, dashboard monitoring, and cloud deployment.
 
