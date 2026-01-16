@@ -5,9 +5,9 @@ import os
 # Create models directory if it doesn't exist
 os.makedirs('models', exist_ok=True)
 
-model = YOLO('yolov8n.pt')
+model = YOLO('yolov8m.pt')
 # Train the model
-results = model.train(data='data_small.yaml', epochs=25, imgsz=416)
+results = model.train(data='data_small.yaml', epochs=100, imgsz=640)
 
 # Export the model to ONNX
 success = model.export(format='onnx')

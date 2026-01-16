@@ -11,7 +11,7 @@ function App() {
         </p>
 
         <div className="action-area">
-          <a href="http://localhost:8501" className="cta-button">
+          <a href="https://pcbdefectdetection-ansvf2zgpoqrbb4fypvryy.streamlit.app/" className="cta-button">
             Get Started
           </a>
         </div>
