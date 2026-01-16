@@ -68,7 +68,7 @@ python app/main.py
 
 ### 4. Run the REST API
 ```bash
-uvicorn app.api:app --host 0.0.0.0 --port 8000
+uvicorn app/api:app --host 0.0.0.0 --port 8000
 ```
 
 ### 5. Train Your Own Model
