@@ -1,0 +1,12 @@
+train: data/pcb-defect-dataset/train/images
+val: data/pcb-defect-dataset/val/images
+test: data/pcb-defect-dataset/test/images
+
+nc: 6
+names:
+  - Open
+  - Short
+  - Mouse_bite
+  - Spur
+  - Missing_hole
+  - Spurious_copper

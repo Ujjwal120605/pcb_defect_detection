@@ -1,0 +1,12 @@
+nc: 7
+names:
+- Open
+- Short
+- Mouse_bite
+- Spur
+- Missing_hole
+- Spurious_copper
+- Burnt
+
+train: /Users/ujjwalbajpai/Desktop/bsckend/AI-Based-Visual-Inspection-System-for-Electronic-PCBA-and-Component-Defect-Detection/data/pcb-small/train/images
+val: /Users/ujjwalbajpai/Desktop/bsckend/AI-Based-Visual-Inspection-System-for-Electronic-PCBA-and-Component-Defect-Detection/data/pcb-small/val/images

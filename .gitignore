@@ -1,0 +1,30 @@
+# Virtual Environment
+venv/
+env/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Mac
+.DS_Store
+
+# Data
+data/
+datasets/
+
+# Models and Training
+runs/
+models/
+*.pt
+*.pth
+*.onnx
+
+# IDE
+.vscode/
+.idea/
+
+# Node (just in case)
+node_modules/

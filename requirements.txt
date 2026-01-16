@@ -1,8 +1,14 @@
 ultralytics
 fastapi
 uvicorn
-opencv-python
+opencv-python-headless
 numpy
 pandas
 sqlalchemy
 psycopg2-binary
+streamlit
+streamlit-webrtc
+watchdog
+python-multipart
+av
+av

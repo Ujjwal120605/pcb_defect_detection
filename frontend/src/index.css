@@ -1,0 +1,248 @@
+:root {
+  font-family: 'Outfit', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.92);
+  background-color: #050505;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Import Font (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Orbitron:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  /* Background Image Setup */
+  background-image: url('./assets/background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Complex Dimming & Grid Overlay */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(to bottom, rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.6)),
+    radial-gradient(circle at center, transparent 0%, #000 100%);
+  z-index: -2;
+}
+
+/* Tech Grid Pattern (Cyberpunk vibe) */
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+/* Typography with Glow */
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  /* Tech Font */
+  font-size: 5em;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+
+  /* Neon Text Effect */
+  text-shadow:
+    0 0 10px rgba(6, 182, 212, 0.8),
+    0 0 20px rgba(6, 182, 212, 0.5),
+    0 0 40px rgba(6, 182, 212, 0.3);
+
+  animation: flicker 4s infinite alternate;
+}
+
+@keyframes flicker {
+
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow:
+      0 0 10px rgba(6, 182, 212, 0.8),
+      0 0 20px rgba(6, 182, 212, 0.5),
+      0 0 40px rgba(6, 182, 212, 0.3);
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+    opacity: 0.8;
+  }
+}
+
+p.subtitle {
+  font-size: 1.4rem;
+  color: #a5f3fc;
+  /* Cyan 200 */
+  margin-bottom: 3.5rem;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  font-weight: 300;
+  text-shadow: 0 0 5px rgba(6, 182, 212, 0.3);
+}
+
+/* Advanced Glass Panel */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 24px;
+  padding: 5rem 3rem;
+  box-shadow:
+    0 0 40px rgba(8, 145, 178, 0.15),
+    inset 0 0 20px rgba(56, 189, 248, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glowing Border Animation */
+.glass-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #0ea5e9, transparent);
+  animation: scanline 3s linear infinite;
+}
+
+@keyframes scanline {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+/* CTA Button - Neon Style */
+.cta-button {
+  display: inline-block;
+  position: relative;
+  padding: 1.2rem 3.5rem;
+  font-size: 1.4rem;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: #0ea5e9;
+  background: rgba(14, 165, 233, 0.1);
+  border: 2px solid #0ea5e9;
+  border-radius: 4px;
+  /* Techy sharp edges */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.2);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cta-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #0ea5e9;
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+
+.cta-button:hover {
+  color: #fff;
+  box-shadow: 0 0 30px rgba(14, 165, 233, 0.6);
+}
+
+.cta-button:hover::after {
+  width: 100%;
+}
+
+/* Feature Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.feature-card {
+  background: rgba(15, 23, 42, 0.6);
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(56, 189, 248, 0.1);
+  transition: all 0.4s ease;
+  text-align: left;
+  position: relative;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  border-color: #0ea5e9;
+  box-shadow: 0 10px 30px rgba(14, 165, 233, 0.2);
+}
+
+.feature-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #e0f2fe;
+  margin: 0 0 1rem 0;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.feature-card span {
+  color: #94a3b8;
+  font-size: 1rem;
+  font-family: 'Outfit', sans-serif;
+}
